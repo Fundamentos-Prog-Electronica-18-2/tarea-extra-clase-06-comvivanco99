@@ -1,0 +1,67 @@
+//EJERCICIO 1
+Inicio
+edades (10),i[0-n]
+edades <- [10,18,19,11,20,21,16,15,11,12]
+promedio,d[0-n]
+contador <- 0
+suma <- 0
+promedio,d[0-n]
+mientras contador < 10 entonces 
+        si edades(contador) >= 16 entonces
+           suma <- suma+edades(contador)
+        FinSi
+    contador <- contador+1
+FinMientras
+promedio <- suma/10
+<<"El promedio de edades, solo de las edades mayores o iguales a 16 es",promedio
+Fin
+
+//EJERCICIO 2
+Inicio
+colegio1 (10),d[0-n]
+colegio2 (10),d[0-n]
+colegio1 <- [15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10] 
+colegio2 <- [14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]
+promedio1,d[0-n]
+promedio2,d[0-n]
+suma1 <- 0
+suma2 <- 0
+contador <- 0
+mientras contador < 10 entonces
+        si ((colegio1(contador) >= 16.5) o (colegio2(contador)>= 16.5))  entonces
+           suma1 <- suma1+colegio1(contador)
+           suma2 <- suma2+colegio2(contador)
+         FinSi
+   contador <- contador+1
+FinMientras
+promedio1 <- suma1/10
+promedio2 <- suma2/10
+si promedio1 > promedio2 entonces
+        <<"El colegio con mejor promedio es el Bolivar"
+CasoContrario
+        <<"El colegio con mejor promedio es el Sur"
+Fin
+
+//EJERCICIO 3
+Inicio
+colegio1 (10),d[0-n]
+colegio2 (10),d[0-n]
+colegio1 <- [15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10]
+colegio2 <- [14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]
+promedio,d[0-n]
+promediofinal,d[0-n]
+contador <- 0
+suma1 <- 0
+suma2 <- 0
+mientras contador < 10 entonces
+      suma1 <- suma1+colegio1(contador)
+      suma2 <- suma2+colegio2(contador)
+      contador <- contador+1
+FinMientras
+promedio1 <- suma1/10
+promedio2 <- suma2/10
+<<"El promedio del Bolivar es:", promedio1
+<<"El promedio del Sur es:", promedio2
+promediofinal <- (promedio1+promedio2)/2
+<<"El promedio entre los 2 colegios es:", promediofinal
+Fin
